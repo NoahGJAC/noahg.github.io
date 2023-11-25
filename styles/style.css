@@ -64,8 +64,8 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 1fr;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -104,12 +104,12 @@
     display: flex;
   }
   
-  main > article > .article-description-section,
+  main > article > .article-description,
   main > article > .article-nav-section {
     border-left: 1px solid var(--border-color);
   }
   
-  main > article > .article-title-section,
+  main > article > .article-title,
   main > article > .article-nav-section {
     border-top: 1px solid var(--border-color);
   }
@@ -119,43 +119,38 @@
     background-size: cover;
   }
   
-  main > article > .article-description-section {
+  main > article > .article-description {
     flex-direction: column;
     justify-content: flex-end;
     padding: 4rem; 
   }
   
-  main > article > .article-description-section > p {
+  main > article > .article-description > p {
     color: rgba(255, 255, 255, 0.5);
     font-size: 1.25em;
   }
   
-  main > article > .article-description-section > p  > a:hover {
+  main > article > .article-description > p  > a:hover {
     text-decoration: underline;
   }
   
-  main > article > .article-title-section {
+  main > article > .article-title {
     align-items: center; 
     justify-content: space-between;
     padding: 2rem 4rem;
   }
   
-  main > article > .article-title-section * {
-    color: white;
+  main > article > .article-title * {
+    color: var(--highlight-color);
   }
   
-  main > article > .article-title-section > h2 {
+  main > article > .article-title > h2 {
     flex-basis: 50%;
     font-family: "Montserrat", sans-serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 3rem;
     margin: 0px;
     text-transform: uppercase;
-  }
-  
-  main > article > .article-title-section > i {
-    color: rgba(255, 255, 255, 0.75);
-    font-size:  4rem;
   }
   
   main > article > .article-nav-section > .article-nav-button {
@@ -163,7 +158,6 @@
     flex-grow: 1;
     border: none;
     outline: none;
-    color: rgba(255, 255, 255, 0.75);
     font-size: 3rem;
     cursor: pointer;
   }
@@ -182,5 +176,60 @@
     transition: transform 0.3s ease; 
   }
   
+  section#about-me {
+    background-color: var(--background-color);
+    color: white;
+    padding: 4rem;
+    text-align: center;
+}
+
+.section-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.section-content h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    color: var(--highlight-color);
+}
+
+.section-content p {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+.section-content a.cv-link {
+  background-color: var(--highlight-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section-content a.cv-link:hover {
+  background-color: darken(var(--highlight-color), 10%);
+}
+
+section#cv{
+  text-align: center; 
+  margin: 0 auto; 
+  max-width: 100%; 
+  overflow: hidden;
+}
+
+iframe {
+  width: 800px; 
+  height: 600px; 
+  border: none; 
+  overflow: auto; 
+  display: inline-block; 
+}
 
   
